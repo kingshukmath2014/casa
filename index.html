@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>CasaMarasista — Luxury Villa Experience</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<style>
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif}
+.hero-bg{background-size:cover;background-position:center}
+.masonry{column-gap:1.5rem}
+.masonry img{width:100%;margin-bottom:1.5rem;border-radius:16px;transition:.4s}
+.masonry img:hover{transform:scale(1.04)}
+</style>
+</head>
+
+<body class="bg-[#f8f6f2] text-gray-800">
+
+<!-- NAV -->
+<header class="fixed w-full bg-[#f8f6f2]/90 backdrop-blur z-50 border-b">
+<div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
+<div class="font-playfair text-2xl font-semibold">CasaMarasista</div>
+<nav class="hidden md:flex gap-10 text-sm uppercase tracking-wide">
+<a href="#about">About</a>
+<a href="#rooms">Rooms</a>
+<a href="#experience">Experience</a>
+<a href="#gallery">Gallery</a>
+<a href="#events">Events</a>
+<a href="#reviews">Reviews</a>
+<a href="#contact" class="px-5 py-2 bg-teal-700 text-white rounded-full">Book Now</a>
+</nav>
+</div>
+</header>
+
+<!-- HERO SPLIT -->
+<section class="grid md:grid-cols-2 min-h-screen pt-24">
+<div class="bg-teal-800 text-white flex flex-col justify-center px-16 py-20">
+<h1 class="text-5xl font-playfair leading-tight mb-6">Enjoy a luxury experience and best moment</h1>
+<p class="opacity-80 mb-8">Private 5BHK villa near Colva Beach with infinity pool and serene tropical charm.</p>
+<div class="flex gap-6">
+<a href="#contact" class="px-8 py-3 bg-white text-teal-800 rounded-full">Booking</a>
+<a href="#gallery" class="underline">View Gallery</a>
+</div>
+</div>
+<div class="hero-bg" style="background-image:url('https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=2070&auto=format&fit=crop');"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="py-24">
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div>
+<h2 class="text-4xl font-playfair mb-6">Inspired by coastal serenity</h2>
+<p class="text-gray-600 leading-relaxed">Wake up to golden sunshine and ocean breeze. Designed with warm textures, calm palettes and elegant finishes, our villa blends modern indulgence with tropical beauty.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop" class="rounded-2xl shadow-xl"/>
+</div>
+</section>
+
+<!-- ROOMS -->
+<section id="rooms" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-playfair text-center mb-16">Stay With Us</h2>
+<div class="grid md:grid-cols-3 gap-12">
+<div>
+<img src="https://images.unsplash.com/photo-1505691723518-36a28b3b9648?q=80&w=1200" class="rounded-xl mb-6"/>
+<h3 class="font-semibold text-lg">Premium Ocean View</h3>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200" class="rounded-xl mb-6"/>
+<h3 class="font-semibold text-lg">Sunset Bliss Room</h3>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1501117716987-c8e36b9e5f54?q=80&w=1200" class="rounded-xl mb-6"/>
+<h3 class="font-semibold text-lg">Garden Harmony Suite</h3>
+</div>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCE SECTION -->
+<section id="experience" class="py-24">
+<div class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+<div class="bg-teal-800 text-white p-16 rounded-2xl">
+<h3 class="text-3xl font-playfair mb-6">Unique Dining & Experiences</h3>
+<p class="opacity-80">From private chef dinners to romantic poolside evenings, indulge in unforgettable villa moments.</p>
+</div>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200" class="rounded-2xl shadow-xl"/>
+</div>
+</section>
+
+<!-- GALLERY WITH TABS + MASONRY -->
+<section id="gallery" class="py-24 bg-white">
+<div class="max-w-7xl mx-auto px-6">
+<h2 class="text-4xl font-playfair text-center mb-10">Our Gallery</h2>
+<div class="flex justify-center gap-6 mb-12">
+<button onclick="filterGallery('all')" class="tab px-5 py-2 bg-teal-700 text-white rounded-full">All</button>
+<button onclick="filterGallery('interior')" class="tab px-5 py-2 bg-gray-200 rounded-full">Interior</button>
+<button onclick="filterGallery('pool')" class="tab px-5 py-2 bg-gray-200 rounded-full">Pool</button>
+<button onclick="filterGallery('outdoor')" class="tab px-5 py-2 bg-gray-200 rounded-full">Outdoor</button>
+</div>
+<div id="galleryGrid" class="masonry columns-1 sm:columns-2 lg:columns-3">
+<img data-category="interior" src="https://images.unsplash.com/photo-1505691723518-36a28b3b9648?q=80&w=1200"/>
+<img data-category="pool" src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200"/>
+<img data-category="outdoor" src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?q=80&w=1200"/>
+<img data-category="interior" src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1200"/>
+<img data-category="pool" src="https://images.unsplash.com/photo-1501117716987-c8e36b9e5f54?q=80&w=1200"/>
+</div>
+</div>
+</section>
+
+<!-- EVENTS -->
+<section id="events" class="py-24">
+<div class="max-w-6xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-playfair mb-16">Events</h2>
+<div class="grid md:grid-cols-2 gap-16">
+<div>
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200" class="rounded-xl mb-6"/>
+<h3 class="font-semibold">A History of Romance</h3>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200" class="rounded-xl mb-6"/>
+<h3 class="font-semibold">Gather Together</h3>
+</div>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS WITH AVATAR -->
+<section id="reviews" class="py-24 bg-white">
+<div class="max-w-6xl mx-auto px-6 text-center">
+<h2 class="text-4xl font-playfair mb-16">What Our Guests Say</h2>
+<div class="grid md:grid-cols-3 gap-12">
+<div class="bg-[#f8f6f2] p-10 rounded-2xl shadow-sm">
+<img src="https://randomuser.me/api/portraits/women/65.jpg" class="w-20 h-20 mx-auto rounded-full mb-6"/>
+<p class="italic mb-6">"Absolutely breathtaking stay!"</p>
+<h4 class="font-semibold">Ritika Sharma</h4>
+<span class="text-sm text-gray-500">Delhi</span>
+</div>
+<div class="bg-[#f8f6f2] p-10 rounded-2xl shadow-sm">
+<img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-20 h-20 mx-auto rounded-full mb-6"/>
+<p class="italic mb-6">"Morning coffee with sea breeze was magical."</p>
+<h4 class="font-semibold">Arjun Patel</h4>
+<span class="text-sm text-gray-500">Ahmedabad</span>
+</div>
+<div class="bg-[#f8f6f2] p-10 rounded-2xl shadow-sm">
+<img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-20 h-20 mx-auto rounded-full mb-6"/>
+<p class="italic mb-6">"Perfect blend of luxury and comfort."</p>
+<h4 class="font-semibold">Nisha Mehta</h4>
+<span class="text-sm text-gray-500">Bangalore</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- CONTACT CTA -->
+<section id="contact" class="py-24 bg-teal-800 text-white text-center">
+<h2 class="text-4xl font-playfair mb-6">Your Luxurious Escape Awaits</h2>
+<p class="mb-8">Call +91 91004 50303 or contact@casamarasista.com</p>
+<a href="mailto:contact@casamarasista.com" class="px-10 py-4 bg-white text-teal-800 rounded-full">Book Now</a>
+</section>
+
+<footer class="py-10 text-center text-sm bg-[#f1ede6]">
+©2025 CasaMarasista | All Rights Reserved
+</footer>
+
+<script>
+function filterGallery(category){
+const images=document.querySelectorAll('#galleryGrid img');
+images.forEach(img=>{
+if(category==='all'||img.dataset.category===category){img.style.display='block'}else{img.style.display='none'}
+})}
+
+gsap.registerPlugin(ScrollTrigger);
+gsap.utils.toArray('section').forEach(section=>{
+gsap.from(section,{opacity:0,y:80,duration:1.2,scrollTrigger:{trigger:section,start:'top 85%'}});
+});
+</script>
+
+</body>
+</html>
