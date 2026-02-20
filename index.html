@@ -267,12 +267,19 @@
         .event-card:hover .event-link i { transform: translateX(3px); }
 
         @media (max-width: 1023px) {
+            footer#contact .footer-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
             footer#contact .footer-intro {
                 grid-column: 1 / -1;
                 max-width: 100%;
             }
             footer#contact .footer-intro h2 {
                 width: 100%;
+            }
+            footer#contact .footer-nav,
+            footer#contact .footer-location {
+                grid-column: span 1 / span 1;
             }
         }
 
@@ -348,6 +355,13 @@
         }
 
         @media (max-width: 767px) {
+            footer#contact .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            footer#contact .footer-nav,
+            footer#contact .footer-location {
+                grid-column: 1 / -1;
+            }
             section[id], footer[id] { scroll-margin-top: 90px; }
             header { padding: 1.1rem 1rem !important; }
             header.scrolled { padding: 0.85rem 1rem !important; }
@@ -685,12 +699,12 @@
 
             <footer id="contact" class="bg-[#0F1D1D] text-[#F5F2ED] pt-32 pb-16 px-10">
                 <div class="max-w-7xl mx-auto">
-                    <div class="grid grid-cols-1 md:grid-cols-4 gap-20 mb-32 reveal">
+                    <div class="footer-grid grid grid-cols-1 md:grid-cols-4 gap-20 mb-32 reveal">
                         <div class="footer-intro col-span-1 md:col-span-2">
                             <h2 class="text-7xl font-serif mb-10 leading-tight">Ready for your<br><i class="text-[#D4AF37]">escape?</i></h2>
                             <p class="opacity-60 max-w-sm text-lg leading-relaxed">Experience the soul of South Goa in our meticulously crafted 5BHK sanctuary. Luxury redefined by the laws of nature.</p>
                         </div>
-                        <div>
+                        <div class="footer-nav">
                             <h4 class="text-[12px] font-bold tracking-[.3em] uppercase text-[#D4AF37] mb-8">Navigation</h4>
                             <ul class="space-y-6 text-base font-medium footer-links">
                                 <li><a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="las la-angle-right"></i>The Villa Journey</a></li>
@@ -699,7 +713,7 @@
                                 <li><a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="las la-angle-right"></i>Contact Concierge</a></li>
                             </ul>
                         </div>
-                        <div>
+                        <div class="footer-location">
                             <h4 class="text-[12px] font-bold tracking-[.3em] uppercase text-[#D4AF37] mb-8">Location</h4>
                             <p class="text-base opacity-70 leading-loose"><i class="las la-map-marker-alt"></i> MADEL, Sernabatim,<br>South Goa - 403708<br>India<br><br>
                             <a href="tel:+919100450303" class="font-bold hover:text-[#D4AF37] transition-colors"><i class="las la-phone"></i> +91 91004 50303</a><br>
