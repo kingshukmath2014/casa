@@ -4,7 +4,11 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sameer beachfront cottages, palolem instead of marasista</title>
+    <title>Sameer Beachfront Cottages | Luxury Stays in Palolem, South Goa</title>
+    <meta name="description"
+        content="Experience authentic beachfront wooden cottages at Sameer Beachfront Cottages on Palolem Beach, South Goa. Uninterrupted sea views, high-speed Wi-Fi, and direct beach access.">
+    <meta name="keywords"
+        content="Sameer Beachfront Cottages, Palolem Beach, South Goa, Beachfront Stay, Wooden Cottages Goa, Sea View Rooms Palolem, Goa Holiday, Luxury Beachfront Goa">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
@@ -68,9 +72,9 @@
             color: #ffffff;
         }
 
-        header.scrolled .logo {
-            font-size: 1.5rem;
-            color: var(--teal);
+        header.scrolled .logo img {
+            height: 3rem;
+            filter: brightness(0);
         }
 
         header.scrolled .header-right span {
@@ -103,6 +107,14 @@
         footer p,
         footer a {
             color: rgba(245, 242, 237, 0.9);
+        }
+
+        /* Mobile Adjustments */
+        @media (max-width: 768px) {
+            p {
+                font-size: 15px !important;
+                line-height: 1.5 !important;
+            }
         }
 
         footer a:hover {
@@ -1260,6 +1272,7 @@
             background: #F9F8F3;
             border-left: 3px solid #D4AF37;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
 
         .event-list-item:hover {
@@ -1394,47 +1407,18 @@
 </head>
 
 <body>
-    <header class="fixed top-0 left-0 w-full z-50 px-10 py-10 flex justify-between items-center" id="main-header">
-        <div class="logo font-serif tracking-[0.3em] uppercase text-3xl transition-all duration-500">
-            Marasista
+    <header class="fixed top-0 left-0 w-full z-50 px-10 py-6 flex justify-between items-center" id="main-header">
+        <div class="logo transition-all duration-500">
+            <img src="images/logo.PNG" alt="Sameer Beachfront logo"
+                class="h-16 md:h-20 w-auto object-contain transition-all duration-500" />
         </div>
         <div class="header-right flex items-center space-x-8">
             <span class="text-[12px] font-semibold tracking-widest uppercase hidden md:block">Experience</span>
-            <button id="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="menu-overlay">
-                <span class="bar bar-top"></span>
-                <span class="bar bar-bottom"></span>
-            </button>
         </div>
     </header>
 
-    <div id="menu-overlay" class="menu-overlay" aria-hidden="true">
-        <div class="menu-backdrop"></div>
-        <nav class="menu-panel flex flex-col justify-between">
-            <div>
-                <p class="menu-kicker mb-8">Explore Casa Marasista</p>
-                <div class="space-y-5">
-                    <a href="#home" class="menu-item" style="--i: 1"><i class="las la-compass"></i>Villa Journey</a>
-                    <a href="#suites" class="menu-item" style="--i: 2"><i class="las la-bed"></i>Guest Suites</a>
-                    <a href="#amenity" class="menu-item" style="--i: 3"><i class="las la-water"></i>Infinity
-                        Experience</a>
-                    <a href="#journal" class="menu-item" style="--i: 4"><i class="las la-camera-retro"></i>Visual
-                        Journal</a>
-                    <a href="#culinary" class="menu-item" style="--i: 5"><i class="las la-utensils"></i>Curated
-                        Dining</a>
-                    <a href="#facilities" class="menu-item" style="--i: 6"><i class="las la-spa"></i>Wellness &
-                        Facilities</a>
-                    <a href="#events" class="menu-item" style="--i: 7"><i class="las la-glass-cheers"></i>Events At
-                        Casa</a>
-                    <a href="#contact" class="menu-item" style="--i: 8"><i class="las la-concierge-bell"></i>Contact
-                        Concierge</a>
-                </div>
-            </div>
-            <p class="menu-kicker">South Goa, India · +91 93701 48407</p>
-        </nav>
-    </div>
-
     <div class="floating-cta">
-        <a href="https://wa.me/917878141299"
+        <a href="https://wa.me/917878141299" target="_blank" rel="noopener noreferrer"
             class="floating-book-btn bg-[#0F1D1D] text-white px-12 py-5 rounded-full text-[12px] font-bold tracking-[0.2em] uppercase hover:bg-[#D4AF37] overflow-hidden relative isolate transition-all shadow-2xl flex items-center justify-center">
             <i class="las la-calendar-check cta-icon"></i>Book My Stay
         </a>
@@ -1455,10 +1439,16 @@
                     <p class="text-lg md:text-2xl font-light tracking-widest uppercase text-white">
                         Palolem • Private Sanctuary
                     </p>
-                    <a href="https://wa.me/917878141299"
-                        class="hero-call-btn mt-10 inline-flex items-center gap-3 rounded-full border border-[#D4AF37] bg-[#D4AF37] px-7 py-3 text-[12px] font-bold tracking-[0.18em] uppercase text-[#0F1D1D] transition-all duration-300">
-                        <i class="las la-phone text-[15px]"></i>whatsapp now
-                    </a>
+                    <div class="flex flex-col md:flex-row items-center justify-center gap-4 mt-10">
+                        <a href="tel:+919370148407"
+                            class="hero-call-btn inline-flex items-center gap-3 rounded-full border border-[#D4AF37] bg-[#D4AF37] px-8 py-4 text-[12px] font-bold tracking-[0.18em] uppercase text-[#0F1D1D] transition-all duration-300">
+                            <i class="las la-phone text-[15px]"></i>Call Now
+                        </a>
+                        <a href="https://wa.me/917878141299" target="_blank" rel="noopener noreferrer"
+                            class="inline-flex items-center gap-3 rounded-full border border-white/30 bg-white/10 backdrop-blur-sm px-8 py-4 text-[12px] font-bold tracking-[0.18em] uppercase text-white hover:bg-white hover:text-[#0F1D1D] transition-all duration-300">
+                            <i class="lab la-whatsapp text-[15px]"></i>WhatsApp Now
+                        </a>
+                    </div>
                 </div>
             </section>
 
@@ -1470,7 +1460,7 @@
                         </h2>
                         <div class="h-1 w-20 mx-auto bg-[#D4AF37] mb-6"></div>
                     </div>
-                    <p class=" mx-auto text-lg text-gray-700 font-normal leading-relaxed">
+                    <p class=" mx-auto text-sm md:text-base text-gray-700 font-normal leading-relaxed">
                         At Sameer Beachfront Cottages, we offer authentic wooden cottages stays just steps from Palolem
                         Beach, one of the most
                         beautiful beaches in South Goa, Goa. Ideally located on Palolem Down Street, our property
@@ -1594,7 +1584,7 @@
                         </button>
                     </div>
                     <div class="relative overflow-hidden">
-                        <img src="images/seaView/DSC07697.jpg" class="h-full w-full object-cover parallax-bg"
+                        <img src="images/seaView/RIZ06633.png" class="h-full w-full object-cover parallax-bg"
                             loading="lazy" decoding="async" alt="Infinity Experience" />
                     </div>
                 </div>
@@ -1631,87 +1621,140 @@
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="masonry-grid">
                         <!-- Property -->
                         <div class="masonry-item property h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/property/RIZ06326.png" class="w-full h-full object-cover" />
+                            <img src="images/property/RIZ06326.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item property h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/property/DSC07674.jpg" class="w-full h-full object-cover" />
+                            <img src="images/property/DSC07674.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item property h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/property/RIZ06444.png" class="w-full h-full object-cover" />
+                            <img src="images/property/RIZ06444.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item property h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/property/RIZ06333.png" class="w-full h-full object-cover" />
+                            <img src="images/property/RIZ06333.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item property h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/property/RIZ06615.png" class="w-full h-full object-cover" />
+                            <img src="images/property/RIZ06615.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
 
                         <!-- Family Rooms -->
                         <div class="masonry-item family h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/Family-room/RIZ06236.png" class="w-full h-full object-cover" />
+                            <img src="images/Family-room/RIZ06236.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item family h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/Family-room/RIZ06398 copy.jpg" class="w-full h-full object-cover" />
+                            <img src="images/Family-room/RIZ06398 copy.jpg" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
                         <div class="masonry-item family h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/Family-room/RIZ06410 copy.jpg" class="w-full h-full object-cover" />
+                            <img src="images/Family-room/RIZ06410 copy.jpg" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
                         <div class="masonry-item family h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/Family-room/RIZ06234.png" class="w-full h-full object-cover" />
+                            <img src="images/Family-room/RIZ06234.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item family h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/Family-room/RIZ06403 copy.jpg" class="w-full h-full object-cover" />
+                            <img src="images/Family-room/RIZ06403 copy.jpg" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
 
                         <!-- Sea View -->
                         <div class="masonry-item seaview h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/seaView/DSC07714.jpg" class="w-full h-full object-cover" />
+                            <img src="images/seaView/DSC07714.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item seaview h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/seaView/605377503.jpg" class="w-full h-full object-cover" />
+                            <img src="images/seaView/605377503.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item seaview h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/seaView/RIZ06633.png" class="w-full h-full object-cover" />
+                            <img src="images/seaView/RIZ06633.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item seaview h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/seaView/605377497.jpg" class="w-full h-full object-cover" />
+                            <img src="images/seaView/605377497.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item seaview h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/seaView/DSC07698.jpg" class="w-full h-full object-cover" />
+                            <img src="images/seaView/DSC07698.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
+                        </div>
+                        <div class="masonry-item seaview h-short overflow-hidden reveal rounded-sm">
+                            <img src="images/seaView/605377513.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
+                        </div>
+                        <div class="masonry-item seaview h-short overflow-hidden reveal rounded-sm">
+                            <img src="images/seaView/627320522.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
+                        </div>
+                        <div class="masonry-item seaview h-tall overflow-hidden reveal rounded-sm">
+                            <img src="images/seaView/RIZ06467.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
 
                         <!-- Side Sea View -->
                         <div class="masonry-item sidesea h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/sideSeaView/RIZ06239.png" class="w-full h-full object-cover" />
+                            <img src="images/sideSeaView/RIZ06239.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item sidesea h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/sideSeaView/RIZ06335.png" class="w-full h-full object-cover" />
+                            <img src="images/sideSeaView/RIZ06335.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item sidesea h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/sideSeaView/605377809.jpg" class="w-full h-full object-cover" />
+                            <img src="images/sideSeaView/605377809.jpg" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
                         <div class="masonry-item sidesea h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/sideSeaView/RIZ06275.png" class="w-full h-full object-cover" />
+                            <img src="images/sideSeaView/RIZ06275.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item sidesea h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/sideSeaView/RIZ06382.png" class="w-full h-full object-cover" />
+                            <img src="images/sideSeaView/RIZ06382.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
+                        </div>
+                        <div class="masonry-item sidesea h-short overflow-hidden reveal rounded-sm">
+                            <img src="images/sideSeaView/RIZ06305.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
+                        </div>
+                        <div class="masonry-item sidesea h-short overflow-hidden reveal rounded-sm">
+                            <img src="images/sideSeaView/RIZ06468 (1).png" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
 
                         <!-- Balcony -->
                         <div class="masonry-item balcony h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/balconyView/RIZ06540.png" class="w-full h-full object-cover" />
+                            <img src="images/balconyView/RIZ06540.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item balcony h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/balconyView/DSC07778.jpg" class="w-full h-full object-cover" />
+                            <img src="images/balconyView/DSC07778.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item balcony h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/balconyView/RIZ06327 copy.jpg" class="w-full h-full object-cover" />
+                            <img src="images/balconyView/RIZ06327 copy.jpg" class="w-full h-full object-cover"
+                                loading="lazy" decoding="async" />
                         </div>
                         <div class="masonry-item balcony h-short overflow-hidden reveal rounded-sm">
-                            <img src="images/balconyView/DSC07666.jpg" class="w-full h-full object-cover" />
+                            <img src="images/balconyView/DSC07666.jpg" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                         <div class="masonry-item balcony h-tall overflow-hidden reveal rounded-sm">
-                            <img src="images/balconyView/RIZ06351.png" class="w-full h-full object-cover" />
+                            <img src="images/balconyView/RIZ06351.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
+                        </div>
+                        <div class="masonry-item balcony h-short overflow-hidden reveal rounded-sm">
+                            <img src="images/balconyView/RIZ06535.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
+                        </div>
+                        <div class="masonry-item balcony h-tall overflow-hidden reveal rounded-sm">
+                            <img src="images/balconyView/RIZ06542.png" class="w-full h-full object-cover" loading="lazy"
+                                decoding="async" />
                         </div>
                     </div>
 
@@ -1730,7 +1773,7 @@
                         <h2 class="text-5xl md:text-6xl font-serif leading-tight mb-6">
                             An Idyllic Beachfront Setting on Palolem’s Golden Shores
                         </h2>
-                        <p class="max-w-lg text-lg leading-relaxed">
+                        <p class="max-w-lg text-base leading-relaxed">
                             From sunrise views across Palolem Beach to tranquil evenings overlooking the Arabian Sea,
                             every stay at our beachfront
                             cottages in South Goa is defined by uninterrupted sea vistas, gentle ocean breezes, and the
@@ -1739,7 +1782,8 @@
                         <a href="#" class="story-cta">Discover Dining <i class="las la-long-arrow-alt-right"></i></a>
                     </div>
                     <div class="story-panel-media reveal">
-                        <img src="images/property/DSC07807.jpg" alt="Curated dining at Casa Marasista" />
+                        <img src="images/property/DSC07807.jpg" loading="lazy" decoding="async"
+                            alt="Curated dining at Casa Marasista" />
                     </div>
                 </div>
             </section>
@@ -1753,7 +1797,7 @@
                         <h2 class="text-5xl md:text-6xl font-serif mb-4">
                             Beachfront Comfort, Coastal Leisure & Effortless Living in Palolem
                         </h2>
-                        <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+                        <p class="max-w-3xl mx-auto text-base leading-relaxed">
                             Thoughtfully curated services and modern comforts designed to elevate your stay at our
                             beachfront cottages in Palolem, South Goa. From uninterrupted sea views and private
                             balconies to complimentary Wi-Fi, daily housekeeping, and direct access to Palolem Beach,
@@ -1797,54 +1841,51 @@
                     </div>
 
                     <div class="events-list-grid reveal">
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-birthday-cake mr-2"></i> Birthdays</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-glass-cheers mr-2"></i> Wedding Anniversaries</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-heart mr-2"></i> Honeymoons</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-ring mr-2"></i> Engagement Celebrations</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-rainbow mr-2"></i> LGBTQ+ Weddings</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-baby-carriage mr-2"></i> Gender Reveals</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-briefcase mr-2"></i> Corporate Retreats</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-church mr-2"></i> Micro-Weddings</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-magic mr-2"></i> Proposal Setups</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-infinity mr-2"></i> Vow Renewals</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-user-friends mr-2"></i> Bachelor/Bachelorette</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-users mr-2"></i> Family Reunions</h4>
                         </div>
-                        <div class="event-list-item">
+                        <div class="event-list-item open-booking-modal">
                             <h4><i class="las la-leaf mr-2"></i> Wellness Retreats</h4>
                         </div>
                     </div>
 
                     <div class="mt-20 flex flex-col md:flex-row items-center justify-center gap-6 reveal">
-                        <a href="tel:+919370148407" class="btn-call inline-flex px-10 py-5">
-                            <i class="las la-phone text-xl"></i> Call Concierge
-                        </a>
-                        <a href="https://wa.me/917878141299" class="btn-whatsapp inline-flex px-10 py-5">
-                            <i class="lab la-whatsapp text-xl"></i> WhatsApp Booking
-                        </a>
+                        <button class="btn-call inline-flex px-10 py-5 open-booking-modal">
+                            <i class="las la-phone text-xl mr-2"></i> Plan My Event
+                        </button>
                     </div>
                 </div>
             </section>
@@ -1854,7 +1895,7 @@
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d3853.665882128652!2d74.01938802511421!3d15.011241285525227!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sSameer%20Beachfront%20Cottages!5e0!3m2!1sen!2sin!4v1771666014069!5m2!1sen!2sin"
                     class="w-full h-[400px]" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
+                    title="Location of Sameer Beachfront Cottages" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </section>
 
@@ -1862,10 +1903,12 @@
                 <div class="max-w-7xl mx-auto">
                     <div class="footer-grid grid grid-cols-1 gap-20 mb-16 reveal">
                         <div class="footer-intro">
+                            <img src="images/logo.PNG" alt="Sameer Beachfront logo"
+                                class="h-20 w-auto object-contain mb-8 opacity-90" />
                             <h2 class="text-7xl font-serif mb-10 leading-tight">
                                 Ready for your<br /><i class="text-[#D4AF37]">escape?</i>
                             </h2>
-                            <p class="opacity-60 text-lg leading-relaxed">
+                            <p class="opacity-60 text-base leading-relaxed">
                                 Nestled directly on Palolem Beach in South Goa, Sameer Beachfront Cottages offers a
                                 refined yet relaxed beachfront stay ideal for couples, families, UK holidaymakers
                                 seeking winter sun, corporate retreats, wedding anniversaries, honeymooners, and remote
@@ -1914,12 +1957,10 @@
                             traveler.
                         </div>
                         <div class="flex space-x-12">
-                            <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="lab la-instagram"></i>
+                            <a href="https://www.instagram.com/sameerbeachfrontcottages?igsh=MTRsNXJqcXByMnc5ZA=="
+                                target="_blank" class="hover:text-[#D4AF37] transition-colors"><i
+                                    class="lab la-instagram"></i>
                                 Instagram</a>
-                            <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="lab la-twitter"></i>
-                                Twitter</a>
-                            <a href="#" class="hover:text-[#D4AF37] transition-colors"><i class="las la-shield-alt"></i>
-                                Privacy</a>
                         </div>
                     </div>
                 </div>
@@ -1971,153 +2012,81 @@
                 });
             });
 
-            function updateGallery(filter, showAll = false) {
-                const $items = $(".masonry-item");
-                const $btn = $("#load-more-gallery");
+            // Lightbox & Gallery Logic
+            const $items = $(".masonry-item");
+            const $loadMoreBtn = $("#load-more-gallery");
+            const $lightboxModal = $("#lightbox-modal");
+            const $lightboxImage = $("#lightbox-image");
+            const $counter = $("#lightbox-counter");
+            const $tabs = $(".tab-btn");
 
-                // Hide all items initially
-                $items.hide().css({ opacity: 0, scale: 0.95 });
+            let currentImages = [];
+            let currentIndex = 0;
 
-                // Get matching items
+            const updateGallery = (filter, showAll = false) => {
                 const $filteredItems = (filter === "all") ? $items : $items.filter("." + filter);
-
-                // Determine visible items (limit to 5 if not showAll)
                 const $visibleItems = showAll ? $filteredItems : $filteredItems.slice(0, 5);
 
-                // Show button if there are more items to show
+                $items.hide().css({ opacity: 0, scale: 0.95 });
+
                 if ($filteredItems.length > 5 && !showAll) {
-                    $btn.parent().show();
+                    $loadMoreBtn.parent().show();
                 } else {
-                    $btn.parent().hide();
+                    $loadMoreBtn.parent().hide();
                 }
 
-                // Animate visible items
                 $visibleItems.show();
                 gsap.to($visibleItems, {
-                    scale: 1,
-                    opacity: 1,
-                    duration: 0.6,
-                    stagger: 0.1,
-                    ease: "expo.out"
+                    scale: 1, opacity: 1, duration: 0.6, stagger: 0.1, ease: "expo.out"
                 });
-            }
+            };
 
             // Initial call
             updateGallery("all", false);
 
-            $(".tab-btn").on("click", function () {
+            $tabs.on("click", function () {
                 const filter = $(this).data("filter");
-                $(".tab-btn").removeClass("active");
+                $tabs.removeClass("active");
                 $(this).addClass("active");
                 updateGallery(filter, false);
             });
 
-            $("#load-more-gallery").on("click", function () {
-                const activeFilter = $(".tab-btn.active").data("filter");
+            $loadMoreBtn.on("click", () => {
+                const activeFilter = $tabs.filter(".active").data("filter");
                 updateGallery(activeFilter, true);
             });
-
-            const $menuToggle = $("#menu-toggle");
-            const $menuOverlay = $("#menu-overlay");
-
-            const setMenuState = (isOpen) => {
-                $menuToggle
-                    .toggleClass("open", isOpen)
-                    .attr("aria-expanded", String(isOpen));
-                $menuOverlay
-                    .toggleClass("open", isOpen)
-                    .attr("aria-hidden", String(!isOpen));
-                $("body").toggleClass("menu-open", isOpen);
-            };
-
-            $menuToggle.on("click", () => {
-                setMenuState(!$menuOverlay.hasClass("open"));
-            });
-
-            $menuOverlay.on("click", function (e) {
-                if ($(e.target).closest(".menu-panel").length === 0) {
-                    setMenuState(false);
-                }
-            });
-
-            $("#menu-overlay a").on("click", () => setMenuState(false));
-
-
-            $(document).on("keydown", function (e) {
-                if (e.key === "Escape" && $menuOverlay.hasClass("open")) {
-                    setMenuState(false);
-                }
-            });
-
-            // Booking Modal Logic
-            const $bookingModal = $("#booking-modal");
-            const $closeModal = $("#close-booking-modal");
-
-            const openBookingModal = () => {
-                $bookingModal.addClass("active");
-                $("body").css("overflow", "hidden");
-            };
-
-            const closeBookingModal = () => {
-                $bookingModal.removeClass("active");
-                $("body").css("overflow", "");
-            };
-
-            $(".suite-media, .suite-card img").on("click", function (e) {
-                e.preventDefault();
-                openBookingModal();
-            });
-
-            $closeModal.on("click", closeBookingModal);
-
-            $bookingModal.on("click", function (e) {
-                if ($(e.target).hasClass("booking-modal-overlay")) {
-                    closeBookingModal();
-                }
-            });
-
-            $(document).on("keydown", function (e) {
-                if (e.key === "Escape" && $bookingModal.hasClass("active")) {
-                    closeBookingModal();
-                }
-            });
-
-            // Lightbox Logic
-            const $lightboxModal = $("#lightbox-modal");
-            const $lightboxImage = $("#lightbox-image");
-            const $counter = $("#lightbox-counter");
-            let currentImages = [];
-            let currentIndex = 0;
 
             const updateLightboxImage = (index) => {
                 currentIndex = index;
                 const src = $(currentImages[currentIndex]).attr("src");
 
                 gsap.to($lightboxImage, {
-                    opacity: 0,
-                    scale: 0.98,
-                    duration: 0.3,
+                    opacity: 0, scale: 0.98, duration: 0.3,
                     onComplete: () => {
                         $lightboxImage.attr("src", src);
                         $counter.text(`${currentIndex + 1} / ${currentImages.length}`);
                         gsap.to($lightboxImage, {
-                            opacity: 1,
-                            scale: 1,
-                            duration: 0.4,
-                            ease: "power2.out"
+                            opacity: 1, scale: 1, duration: 0.4, ease: "power2.out"
                         });
                     }
                 });
             };
 
-            const getCurrentGallerySet = () => {
-                const activeFilter = $(".tab-btn.active").data("filter") || "all";
-                const selector = activeFilter === "all" ? ".masonry-item img" : `.masonry-item.${activeFilter} img`;
-                return $(selector).toArray();
+            const closeLightbox = () => {
+                $lightboxModal.removeClass("active");
+                $("body").css("overflow", "");
+                setTimeout(() => $lightboxImage.attr("src", ""), 400);
+            };
+
+            const navigateImage = (direction) => {
+                const newIdx = (currentIndex + direction + currentImages.length) % currentImages.length;
+                updateLightboxImage(newIdx);
             };
 
             $(document).on("click", ".masonry-item img", function () {
-                currentImages = getCurrentGallerySet();
+                const activeFilter = $tabs.filter(".active").data("filter") || "all";
+                const selector = activeFilter === "all" ? ".masonry-item img" : `.masonry-item.${activeFilter} img`;
+                currentImages = $(selector).toArray();
                 currentIndex = currentImages.indexOf(this);
 
                 if (currentIndex !== -1) {
@@ -2127,38 +2096,29 @@
                 }
             });
 
-            const nextImage = () => {
-                const nextIdx = (currentIndex + 1) % currentImages.length;
-                updateLightboxImage(nextIdx);
-            };
-
-            const prevImage = () => {
-                const prevIdx = (currentIndex - 1 + currentImages.length) % currentImages.length;
-                updateLightboxImage(prevIdx);
-            };
-
-            $("#next-btn").on("click", (e) => { e.stopPropagation(); nextImage(); });
-            $("#prev-btn").on("click", (e) => { e.stopPropagation(); prevImage(); });
-
-            const closeLightbox = () => {
-                $lightboxModal.removeClass("active");
-                $("body").css("overflow", "");
-                setTimeout(() => $lightboxImage.attr("src", ""), 400);
-            };
-
+            $("#next-btn").on("click", (e) => { e.stopPropagation(); navigateImage(1); });
+            $("#prev-btn").on("click", (e) => { e.stopPropagation(); navigateImage(-1); });
             $("#close-lightbox-btn").on("click", closeLightbox);
-            $lightboxModal.on("click", function (e) {
-                if ($(e.target).hasClass("lightbox-modal")) {
-                    closeLightbox();
+            $lightboxModal.on("click", (e) => { if ($(e.target).hasClass("lightbox-modal")) closeLightbox(); });
+
+            $(document).on("keydown", (e) => {
+                if ($lightboxModal.hasClass("active")) {
+                    if (e.key === "Escape") closeLightbox();
+                    if (e.key === "ArrowRight") navigateImage(1);
+                    if (e.key === "ArrowLeft") navigateImage(-1);
                 }
             });
 
-            $(document).on("keydown", function (e) {
-                if (!$lightboxModal.hasClass("active")) return;
+            const $bookingModal = $("#booking-modal");
+            const openBookingModal = () => { $bookingModal.addClass("active"); $("body").css("overflow", "hidden"); };
+            const closeBookingModal = () => { $bookingModal.removeClass("active"); $("body").css("overflow", ""); };
 
-                if (e.key === "Escape") closeLightbox();
-                if (e.key === "ArrowRight") nextImage();
-                if (e.key === "ArrowLeft") prevImage();
+            $(".suite-media, .suite-card img, .open-booking-modal").on("click", (e) => { e.preventDefault(); openBookingModal(); });
+            $("#close-booking-modal").on("click", closeBookingModal);
+            $bookingModal.on("click", (e) => { if ($(e.target).hasClass("booking-modal-overlay")) closeBookingModal(); });
+
+            $(document).on("keydown", (e) => {
+                if (e.key === "Escape" && $bookingModal.hasClass("active")) closeBookingModal();
             });
         });
     </script>
@@ -2166,10 +2126,13 @@
     <div id="booking-modal" class="booking-modal-overlay">
         <div class="booking-modal-content">
             <button class="close-modal" id="close-booking-modal">&times;</button>
+            <div class="flex justify-center mb-6">
+                <img src="images/logo.PNG" alt="Sameer Beachfront logo" class="h-16 w-auto object-contain" />
+            </div>
             <h3 class="font-serif text-4xl mb-6 leading-tight">Book Your Beachfront Escape Today</h3>
             <p class="opacity-70 text-sm mb-10 tracking-widest uppercase">Start your journey with us</p>
             <div class="flex flex-col gap-4">
-                <a href="https://wa.me/917878141299" class="btn-whatsapp">
+                <a href="https://wa.me/917878141299" target="_blank" rel="noopener noreferrer" class="btn-whatsapp">
                     <i class="lab la-whatsapp text-xl"></i> WhatsApp Booking
                 </a>
                 <a href="tel:+919370148407" class="btn-call">
@@ -2181,17 +2144,19 @@
 
     <div id="lightbox-modal" class="lightbox-modal">
         <div class="lightbox-content">
-            <button class="close-lightbox" id="close-lightbox-btn">&times;</button>
+            <button class="close-lightbox" id="close-lightbox-btn" aria-label="Close lightbox">&times;</button>
 
             <div class="lightbox-nav">
-                <button class="nav-btn" id="prev-btn"><i class="las la-angle-left"></i></button>
-                <button class="nav-btn" id="next-btn"><i class="las la-angle-right"></i></button>
+                <button class="nav-btn" id="prev-btn" aria-label="Previous image"><i
+                        class="las la-angle-left"></i></button>
+                <button class="nav-btn" id="next-btn" aria-label="Next image"><i
+                        class="las la-angle-right"></i></button>
             </div>
 
             <img src="" alt="Gallery Image Full" id="lightbox-image" class="lightbox-image" />
 
             <div class="lightbox-footer">
-                <span id="lightbox-counter">1 / 1</span>
+                <span id="lightbox-counter" aria-live="polite">1 / 1</span>
             </div>
         </div>
     </div>
